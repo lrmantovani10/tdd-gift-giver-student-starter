@@ -5,10 +5,6 @@ const {BadRequestError} = require("../utils/errors")
 const GiftExchange = require("../models/gift-exchange")
 const gift = new GiftExchange()
 
-// router.use((req,res,next)=>{
-//     if(req.body.names) next(new errors.BadRequestError())
-// })
-
 router.post("/pairs", (request, response, next) => {
     try{
         if(!request.body || !request.body.names) 
